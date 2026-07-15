@@ -1,0 +1,27 @@
+/**
+ * Atlas Editorial — Spacing scale
+ * Prefer: 4 · 8 · 12 · 16 · 24 · 32 · 48 · 64
+ */
+
+:root {
+  --ds-space-0: 0;
+  --ds-space-1: 0.25rem; /* 4 */
+  --ds-space-2: 0.5rem; /* 8 */
+  --ds-space-3: 0.75rem; /* 12 */
+  --ds-space-4: 1rem; /* 16 */
+  --ds-space-5: 1.25rem; /* 20 — rare bridge */
+  --ds-space-6: 1.5rem; /* 24 */
+  --ds-space-8: 2rem; /* 32 */
+  --ds-space-10: 2.5rem; /* 40 — rare bridge */
+  --ds-space-12: 3rem; /* 48 */
+  --ds-space-16: 4rem; /* 64 */
+  --ds-space-20: 5rem; /* 80 */
+  --ds-space-24: 6rem; /* 96 */
+
+  /* Semantic spacing aliases */
+  --ds-space-section: var(--ds-space-16);
+  --ds-space-stack: var(--ds-space-6);
+  --ds-space-inline: var(--ds-space-4);
+  --ds-space-gap: var(--ds-space-4);
+  --ds-space-gap-lg: var(--ds-space-6);
+}

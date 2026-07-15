@@ -1,0 +1,124 @@
+/**
+ * Atlas Editorial — Color tokens
+ * Source values live here. Components must use CSS vars / Tailwind theme aliases only.
+ */
+
+:root {
+  /* Canvas */
+  --color-canvas: #fafafc;
+  --color-surface: #ffffff;
+  --color-surface-elevated: #ffffff;
+  --color-text: #111827;
+  --color-text-muted: #6b7280;
+
+  /* Semantic aliases consumed by shadcn-style utilities */
+  --background: var(--color-canvas);
+  --foreground: var(--color-text);
+  --card: var(--color-surface);
+  --card-foreground: var(--color-text);
+  --popover: var(--color-surface);
+  --popover-foreground: var(--color-text);
+  --elevated: var(--color-surface-elevated);
+
+  --muted: #f3f4f8;
+  --muted-foreground: var(--color-text-muted);
+
+  /* Accent — refined violet / indigo (not default Tailwind blue) */
+  --primary: #5b55e0;
+  --primary-foreground: #fafaff;
+  --primary-soft: #eeedfb;
+  --accent: #f0eef8;
+  --accent-foreground: #3b2f6b;
+  --ring: #6366f1;
+
+  --secondary: #eef0f6;
+  --secondary-foreground: #1f2937;
+
+  /* Status */
+  --success: #059669;
+  --success-foreground: #ecfdf5;
+  --warning: #d97706;
+  --warning-foreground: #fffbeb;
+  --destructive: #e11d48;
+  --destructive-foreground: #fff1f2;
+
+  /* Chrome */
+  --border: rgb(17 24 39 / 0.08);
+  --input: rgb(17 24 39 / 0.1);
+  --glass: rgb(255 255 255 / 0.72);
+  --glass-border: rgb(17 24 39 / 0.08);
+
+  /* Charts */
+  --chart-1: #5b55e0;
+  --chart-2: #0d9488;
+  --chart-3: #db2777;
+  --chart-4: #ca8a04;
+  --chart-5: #6366f1;
+
+  /* Floating shell / sidebar */
+  --sidebar: rgb(255 255 255 / 0.72);
+  --sidebar-foreground: var(--color-text);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--accent-foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+}
+
+.dark {
+  /* Never pure black — premium dark surfaces */
+  --color-canvas: #121417;
+  --color-surface: #1a1e24;
+  --color-surface-elevated: #22272f;
+  --color-text: #f9fafb;
+  --color-text-muted: #9ca3af;
+
+  --background: var(--color-canvas);
+  --foreground: var(--color-text);
+  --card: var(--color-surface);
+  --card-foreground: var(--color-text);
+  --popover: var(--color-surface);
+  --popover-foreground: var(--color-text);
+  --elevated: var(--color-surface-elevated);
+
+  --muted: #22272f;
+  --muted-foreground: var(--color-text-muted);
+
+  --primary: #818cf8;
+  --primary-foreground: #121417;
+  --primary-soft: #25233a;
+  --accent: #25233a;
+  --accent-foreground: #ddd6fe;
+  --ring: #818cf8;
+
+  --secondary: #22272f;
+  --secondary-foreground: #e5e7eb;
+
+  --success: #34d399;
+  --success-foreground: #121417;
+  --warning: #fbbf24;
+  --warning-foreground: #121417;
+  --destructive: #fb7185;
+  --destructive-foreground: #1a1e24;
+
+  --border: rgb(249 250 251 / 0.08);
+  --input: rgb(249 250 251 / 0.12);
+  --glass: rgb(26 30 36 / 0.78);
+  --glass-border: rgb(249 250 251 / 0.08);
+
+  --chart-1: #818cf8;
+  --chart-2: #2dd4bf;
+  --chart-3: #f472b6;
+  --chart-4: #fbbf24;
+  --chart-5: #a78bfa;
+
+  --sidebar: rgb(26 30 36 / 0.78);
+  --sidebar-foreground: var(--color-text);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--accent-foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+}

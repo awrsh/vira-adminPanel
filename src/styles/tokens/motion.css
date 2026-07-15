@@ -1,0 +1,36 @@
+/**
+ * Atlas Editorial — Motion
+ * Subtle only: fade · scale · slide · layout. No distraction.
+ */
+
+:root {
+  --ds-duration-instant: 0ms;
+  --ds-duration-fast: 150ms;
+  --ds-duration-normal: 220ms;
+  --ds-duration-slow: 280ms;
+  --ds-duration-theme: 300ms;
+
+  --ds-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ds-ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ds-ease-linear: linear;
+
+  /* Aliases */
+  --duration-fast: var(--ds-duration-fast);
+  --duration-normal: var(--ds-duration-normal);
+  --duration-slow: var(--ds-duration-slow);
+  --ease-out: var(--ds-ease-out);
+  --ease-in-out: var(--ds-ease-in-out);
+
+  /* Prefer reduced motion */
+  --ds-motion-ok: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --ds-duration-fast: 0ms;
+    --ds-duration-normal: 0ms;
+    --ds-duration-slow: 0ms;
+    --ds-duration-theme: 0ms;
+    --ds-motion-ok: 0;
+  }
+}

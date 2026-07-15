@@ -1,0 +1,42 @@
+/**
+ * Atlas Editorial — Layout tokens
+ * Floating shell, large whitespace, asymmetrical grids.
+ */
+
+:root {
+  /* Shell metrics */
+  --ds-layout-sidebar-width: 15rem; /* 240px */
+  --ds-layout-sidebar-width-collapsed: 4.5rem;
+  --ds-layout-header-height: 3.5rem; /* 56px */
+  --ds-layout-shell-gap: var(--ds-space-4);
+  --ds-layout-shell-inset: var(--ds-space-4);
+  --ds-layout-shell-inset-lg: var(--ds-space-8);
+
+  /* Content */
+  --ds-layout-content-max: 80rem; /* 1280px */
+  --ds-layout-reading-max: 42rem;
+  --ds-layout-page-pad-x: var(--ds-space-4);
+  --ds-layout-page-pad-y: var(--ds-space-6);
+
+  /* Floating chrome offsets (matches breathing space around sidebar/header) */
+  --ds-layout-float-offset: var(--ds-space-4);
+  --ds-layout-float-radius: var(--ds-radius-surface);
+
+  /* Asymmetric dashboard grid */
+  --ds-layout-grid-columns: 12;
+  --ds-layout-grid-gap: var(--ds-space-4);
+  --ds-layout-grid-gap-lg: var(--ds-space-5);
+
+  /* Z-index layers */
+  --ds-z-base: 0;
+  --ds-z-sticky: 20;
+  --ds-z-shell: 40;
+  --ds-z-overlay: 50;
+  --ds-z-toast: 60;
+  --ds-z-cmdk: 70;
+
+  --z-shell: var(--ds-z-shell);
+  --z-overlay: var(--ds-z-overlay);
+  --z-toast: var(--ds-z-toast);
+  --z-cmdk: var(--ds-z-cmdk);
+}

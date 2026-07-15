@@ -1,0 +1,166 @@
+/**
+ * Atlas Editorial — Color tokens
+ * Spec: DESIGN_SYSTEM.md
+ *
+ * Light: soft canvas (#FAFAFC), white surfaces
+ * Dark: #121417 canvas (never pure black), #1A1E24 surfaces
+ * Primary: purple / indigo — never default Tailwind blue
+ */
+
+:root {
+  /* Canvas */
+  --ds-color-background: #fafafc;
+  --ds-color-foreground: #111827;
+
+  /* Surfaces */
+  --ds-color-surface: #ffffff;
+  --ds-color-surface-foreground: #111827;
+  --ds-color-elevated: #ffffff;
+  --ds-color-popover: #ffffff;
+  --ds-color-popover-foreground: #111827;
+
+  /* Muted / subtle fills */
+  --ds-color-muted: #f3f4f8;
+  --ds-color-muted-foreground: #6b7280;
+
+  /* Borders & inputs */
+  --ds-color-border: rgb(17 24 39 / 0.08);
+  --ds-color-input: rgb(17 24 39 / 0.1);
+  --ds-color-ring: #6366f1;
+
+  /* Primary — purple / indigo */
+  --ds-color-primary: #5b55e0;
+  --ds-color-primary-foreground: #fafaff;
+  --ds-color-primary-soft: #eeedfb;
+
+  /* Secondary */
+  --ds-color-secondary: #eef0f6;
+  --ds-color-secondary-foreground: #1f2937;
+
+  /* Accent wash */
+  --ds-color-accent: #f0eef8;
+  --ds-color-accent-foreground: #3b2f6b;
+
+  /* Semantic */
+  --ds-color-success: #059669;
+  --ds-color-success-foreground: #ecfdf5;
+  --ds-color-warning: #d97706;
+  --ds-color-warning-foreground: #fffbeb;
+  --ds-color-danger: #e11d48;
+  --ds-color-danger-foreground: #fff1f2;
+
+  /* Charts */
+  --ds-color-chart-1: #5b55e0;
+  --ds-color-chart-2: #0d9488;
+  --ds-color-chart-3: #db2777;
+  --ds-color-chart-4: #ca8a04;
+  --ds-color-chart-5: #6366f1;
+
+  /* Floating chrome (sidebar / header glass) */
+  --ds-color-sidebar: rgb(255 255 255 / 0.72);
+  --ds-color-sidebar-foreground: #111827;
+  --ds-color-sidebar-primary: #5b55e0;
+  --ds-color-sidebar-primary-foreground: #fafaff;
+  --ds-color-sidebar-accent: #f0eef8;
+  --ds-color-sidebar-accent-foreground: #3b2f6b;
+  --ds-color-sidebar-border: rgb(17 24 39 / 0.08);
+  --ds-color-sidebar-ring: #6366f1;
+
+  --ds-color-glass: rgb(255 255 255 / 0.72);
+  --ds-color-glass-border: rgb(17 24 39 / 0.08);
+
+  /* Semantic aliases used by shadcn / Tailwind mapping */
+  --background: var(--ds-color-background);
+  --foreground: var(--ds-color-foreground);
+  --card: var(--ds-color-surface);
+  --card-foreground: var(--ds-color-surface-foreground);
+  --popover: var(--ds-color-popover);
+  --popover-foreground: var(--ds-color-popover-foreground);
+  --elevated: var(--ds-color-elevated);
+  --muted: var(--ds-color-muted);
+  --muted-foreground: var(--ds-color-muted-foreground);
+  --accent: var(--ds-color-accent);
+  --accent-foreground: var(--ds-color-accent-foreground);
+  --border: var(--ds-color-border);
+  --input: var(--ds-color-input);
+  --ring: var(--ds-color-ring);
+  --primary: var(--ds-color-primary);
+  --primary-foreground: var(--ds-color-primary-foreground);
+  --primary-soft: var(--ds-color-primary-soft);
+  --secondary: var(--ds-color-secondary);
+  --secondary-foreground: var(--ds-color-secondary-foreground);
+  --destructive: var(--ds-color-danger);
+  --destructive-foreground: var(--ds-color-danger-foreground);
+  --success: var(--ds-color-success);
+  --success-foreground: var(--ds-color-success-foreground);
+  --warning: var(--ds-color-warning);
+  --warning-foreground: var(--ds-color-warning-foreground);
+  --chart-1: var(--ds-color-chart-1);
+  --chart-2: var(--ds-color-chart-2);
+  --chart-3: var(--ds-color-chart-3);
+  --chart-4: var(--ds-color-chart-4);
+  --chart-5: var(--ds-color-chart-5);
+  --sidebar: var(--ds-color-sidebar);
+  --sidebar-foreground: var(--ds-color-sidebar-foreground);
+  --sidebar-primary: var(--ds-color-sidebar-primary);
+  --sidebar-primary-foreground: var(--ds-color-sidebar-primary-foreground);
+  --sidebar-accent: var(--ds-color-sidebar-accent);
+  --sidebar-accent-foreground: var(--ds-color-sidebar-accent-foreground);
+  --sidebar-border: var(--ds-color-sidebar-border);
+  --sidebar-ring: var(--ds-color-sidebar-ring);
+  --glass: var(--ds-color-glass);
+  --glass-border: var(--ds-color-glass-border);
+}
+
+.dark {
+  --ds-color-background: #121417;
+  --ds-color-foreground: #f9fafb;
+
+  --ds-color-surface: #1a1e24;
+  --ds-color-surface-foreground: #f9fafb;
+  --ds-color-elevated: #22272f;
+  --ds-color-popover: #1a1e24;
+  --ds-color-popover-foreground: #f9fafb;
+
+  --ds-color-muted: #22272f;
+  --ds-color-muted-foreground: #9ca3af;
+
+  --ds-color-border: rgb(249 250 251 / 0.08);
+  --ds-color-input: rgb(249 250 251 / 0.12);
+  --ds-color-ring: #818cf8;
+
+  --ds-color-primary: #818cf8;
+  --ds-color-primary-foreground: #121417;
+  --ds-color-primary-soft: #25233a;
+
+  --ds-color-secondary: #22272f;
+  --ds-color-secondary-foreground: #e5e7eb;
+
+  --ds-color-accent: #25233a;
+  --ds-color-accent-foreground: #ddd6fe;
+
+  --ds-color-success: #34d399;
+  --ds-color-success-foreground: #121417;
+  --ds-color-warning: #fbbf24;
+  --ds-color-warning-foreground: #121417;
+  --ds-color-danger: #fb7185;
+  --ds-color-danger-foreground: #1a1e24;
+
+  --ds-color-chart-1: #818cf8;
+  --ds-color-chart-2: #2dd4bf;
+  --ds-color-chart-3: #f472b6;
+  --ds-color-chart-4: #fbbf24;
+  --ds-color-chart-5: #a78bfa;
+
+  --ds-color-sidebar: rgb(26 30 36 / 0.78);
+  --ds-color-sidebar-foreground: #f9fafb;
+  --ds-color-sidebar-primary: #818cf8;
+  --ds-color-sidebar-primary-foreground: #121417;
+  --ds-color-sidebar-accent: #25233a;
+  --ds-color-sidebar-accent-foreground: #ddd6fe;
+  --ds-color-sidebar-border: rgb(249 250 251 / 0.08);
+  --ds-color-sidebar-ring: #818cf8;
+
+  --ds-color-glass: rgb(26 30 36 / 0.78);
+  --ds-color-glass-border: rgb(249 250 251 / 0.08);
+}

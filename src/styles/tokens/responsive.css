@@ -1,0 +1,33 @@
+/**
+ * Atlas Editorial — Responsive breakpoints (mobile-first)
+ * Mobile · Tablet · Desktop
+ */
+
+:root {
+  --ds-breakpoint-sm: 40rem; /* 640px — large phones */
+  --ds-breakpoint-md: 48rem; /* 768px — tablet */
+  --ds-breakpoint-lg: 64rem; /* 1024px — desktop */
+  --ds-breakpoint-xl: 80rem; /* 1280px */
+  --ds-breakpoint-2xl: 96rem; /* 1536px */
+
+  /* Container pads by viewport (overridden in media queries) */
+  --ds-container-pad: var(--ds-space-4);
+  --ds-shell-pad: var(--ds-space-4);
+}
+
+@media (min-width: 40rem) {
+  :root {
+    --ds-container-pad: var(--ds-space-6);
+    --ds-shell-pad: var(--ds-space-6);
+  }
+}
+
+@media (min-width: 64rem) {
+  :root {
+    --ds-container-pad: var(--ds-space-8);
+    --ds-shell-pad: var(--ds-space-8);
+    --ds-layout-page-pad-x: var(--ds-space-8);
+    --ds-layout-page-pad-y: var(--ds-space-8);
+    --ds-layout-grid-gap: var(--ds-space-5);
+  }
+}

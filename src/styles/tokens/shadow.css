@@ -1,0 +1,33 @@
+/**
+ * Atlas Editorial — Soft elevation shadows
+ * Avoid heavy / multi-layer harsh shadows.
+ */
+
+:root {
+  --ds-shadow-none: none;
+  --ds-shadow-xs: 0 1px 2px rgb(17 24 39 / 0.03);
+  --ds-shadow-sm: 0 1px 2px rgb(17 24 39 / 0.04),
+    0 4px 12px rgb(17 24 39 / 0.04);
+  --ds-shadow-md: 0 2px 4px rgb(17 24 39 / 0.04),
+    0 12px 32px rgb(17 24 39 / 0.08);
+  --ds-shadow-lg: 0 4px 8px rgb(17 24 39 / 0.05),
+    0 24px 48px rgb(17 24 39 / 0.1);
+  --ds-shadow-focus: 0 0 0 3px color-mix(in oklab, var(--ds-color-ring) 35%, transparent);
+
+  /* Semantic floating chrome */
+  --ds-shadow-float-sm: var(--ds-shadow-sm);
+  --ds-shadow-float-md: var(--ds-shadow-md);
+  --ds-shadow-float-lg: var(--ds-shadow-lg);
+
+  --shadow-float-sm: var(--ds-shadow-float-sm);
+  --shadow-float-md: var(--ds-shadow-float-md);
+  --shadow-float-lg: var(--ds-shadow-float-lg);
+}
+
+.dark {
+  --ds-shadow-xs: 0 1px 2px rgb(0 0 0 / 0.18);
+  --ds-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.2), 0 4px 12px rgb(0 0 0 / 0.24);
+  --ds-shadow-md: 0 2px 4px rgb(0 0 0 / 0.24), 0 12px 32px rgb(0 0 0 / 0.36);
+  --ds-shadow-lg: 0 4px 8px rgb(0 0 0 / 0.28), 0 24px 48px rgb(0 0 0 / 0.42);
+  --ds-shadow-focus: 0 0 0 3px color-mix(in oklab, var(--ds-color-ring) 40%, transparent);
+}

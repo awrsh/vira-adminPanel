@@ -1,0 +1,33 @@
+/**
+ * Atlas Editorial — Border radius
+ * Default / surface: 24px · Small: 12px · Buttons / Inputs: 14px
+ */
+
+:root {
+  --ds-radius-none: 0;
+  --ds-radius-sm: 0.75rem; /* 12px */
+  --ds-radius-md: 0.875rem; /* 14px — buttons & inputs */
+  --ds-radius-lg: 1rem; /* 16px */
+  --ds-radius-xl: 1.25rem; /* 20px */
+  --ds-radius-default: 1.5rem; /* 24px — surfaces / cards */
+  --ds-radius-2xl: 1.5rem; /* 24px */
+  --ds-radius-3xl: 1.75rem; /* 28px */
+  --ds-radius-full: 9999px;
+
+  /* Semantic */
+  --ds-radius-button: var(--ds-radius-md);
+  --ds-radius-input: var(--ds-radius-md);
+  --ds-radius-surface: var(--ds-radius-default);
+  --ds-radius-badge: var(--ds-radius-sm);
+  --ds-radius-control: var(--ds-radius-md);
+
+  /* Aliases consumed by Tailwind / components */
+  --radius: var(--ds-radius-md);
+  --radius-sm: var(--ds-radius-sm);
+  --radius-md: var(--ds-radius-md);
+  --radius-lg: var(--ds-radius-lg);
+  --radius-xl: var(--ds-radius-xl);
+  --radius-2xl: var(--ds-radius-2xl);
+  --radius-3xl: var(--ds-radius-3xl);
+  --radius-surface: var(--ds-radius-surface);
+}

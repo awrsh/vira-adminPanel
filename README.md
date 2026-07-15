@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Persian SaaS Starter Kit Pro
 
-## Getting Started
+Premium Persian/English SaaS starter with **Atlas Editorial** design language, true RTL, modular architecture, and a Mock API — built to sell on RTL marketplaces.
 
-First, run the development server:
+## Stack
+
+- Next.js 16 (App Router) · React 19 · TypeScript (strict)
+- Tailwind CSS v4 · customized shadcn/ui · Framer Motion · Lucide
+- TanStack Query · TanStack Table · React Hook Form · Zod · Zustand
+- next-intl · ECharts · Axios (services) · Mock API (no backend)
+
+## Quick start
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000/fa](http://localhost:3000/fa).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Demo login:** `admin@atlas.dev` / `password`  
+Any `@atlas.dev` email with password `password` also works.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Routes
 
-## Learn More
+| Path | Description |
+|------|-------------|
+| `/[locale]` | Marketing landing |
+| `/[locale]/login` … `/two-factor` | Auth flows |
+| `/[locale]/dashboard` | Widget home |
+| `/[locale]/users` · `/products` · `/orders` | CRUD + DataTable |
+| `/[locale]/settings` | Workspace settings |
+| `/[locale]/design-system` | Design System QA |
 
-To learn more about Next.js, take a look at the following resources:
+Locales: `fa` (RTL, Vazirmatn) · `en` (LTR, Inter).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Architecture
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+src/
+  app/[locale]/          # App Router groups: marketing, auth, dashboard
+  components/ui/         # Design System primitives (tokens only)
+  components/layout/     # Floating shell
+  components/shared/     # Empty/Error/Loading, PageHeader, DataTable, Chart
+  features/*/module.ts   # Module registry entries
+  lib/modules/registry.ts
+  mocks/                 # Seeded DB (≥300 records) + delayed CRUD APIs
+  services/              # Swap this layer for a real backend
+  styles/tokens.css      # Atlas Editorial tokens
+```
 
-## Deploy on Vercel
+### Add a module (no shell rewrite)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Create `src/features/<name>/module.ts` exporting a `ModuleDefinition` (nav, commands, widgets, permissions).
+2. Register it in [`src/lib/modules/registry.ts`](src/lib/modules/registry.ts).
+3. Add an App Router page under `src/app/[locale]/(dashboard)/...`.
+4. Add i18n keys to `messages/fa.json` and `messages/en.json`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Nav, command palette, and permission gating pick up the module automatically.
+
+### Design System rule
+
+Screens consume CSS variables / Tailwind tokens from `src/styles/tokens.css` — do not hardcode hex, radii, or shadows in feature components.
+
+Theme: light · dark · system. Dark canvas is `#121417`, not pure black.
+
+## Scripts
+
+```bash
+npm run dev      # development
+npm run build    # production build
+npm run start    # serve build
+npm run lint     # ESLint
+```
+
+## License
+
+Commercial marketplace starter — configure your marketplace license terms before publishing.

@@ -1,0 +1,15 @@
+/**
+ * Atlas Editorial design tokens — single entry.
+ * Import order matters (aliases depend on base scales).
+ *
+ * @see DESIGN_SYSTEM.md
+ */
+
+@import "./tokens/color.css";
+@import "./tokens/typography.css";
+@import "./tokens/spacing.css";
+@import "./tokens/radius.css";
+@import "./tokens/shadow.css";
+@import "./tokens/motion.css";
+@import "./tokens/layout.css";
+@import "./tokens/responsive.css";

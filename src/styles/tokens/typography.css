@@ -1,0 +1,42 @@
+/**
+ * Atlas Editorial — Typography
+ * Persian: Vazirmatn · English: Inter
+ * Large headings, comfortable line-height, readable body.
+ */
+
+:root {
+  --ds-font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --ds-font-persian: var(--font-vazirmatn), var(--font-inter), ui-sans-serif,
+    system-ui, sans-serif;
+  --ds-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+
+  /* Scale (rem) */
+  --ds-text-xs: 0.75rem; /* 12 */
+  --ds-text-sm: 0.875rem; /* 14 */
+  --ds-text-base: 1rem; /* 16 */
+  --ds-text-lg: 1.125rem; /* 18 */
+  --ds-text-xl: 1.25rem; /* 20 */
+  --ds-text-2xl: 1.5rem; /* 24 */
+  --ds-text-3xl: 1.875rem; /* 30 */
+  --ds-text-4xl: 2.25rem; /* 36 */
+  --ds-text-5xl: 3rem; /* 48 */
+
+  /* Line heights */
+  --ds-leading-tight: 1.25;
+  --ds-leading-snug: 1.375;
+  --ds-leading-normal: 1.6;
+  --ds-leading-relaxed: 1.75;
+
+  /* Weights */
+  --ds-font-weight-normal: 400;
+  --ds-font-weight-medium: 500;
+  --ds-font-weight-semibold: 600;
+  --ds-font-weight-bold: 700;
+
+  /* Tracking */
+  --ds-tracking-tight: -0.02em;
+  --ds-tracking-normal: 0;
+  --ds-tracking-wide: 0.04em;
+  --ds-tracking-wider: 0.12em;
+}

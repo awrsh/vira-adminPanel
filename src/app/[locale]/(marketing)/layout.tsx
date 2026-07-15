@@ -1,0 +1,8 @@
+/** Marketing route group — full-bleed pages without dashboard chrome. */
+export default function MarketingLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return <div className="min-h-dvh">{children}</div>;
+}
